@@ -329,7 +329,7 @@ body {
 .footer {
     position: relative;
     background: #111;
-    background-image: url("https://i.imgur.com/rp6vRhS.jpeg");
+    background-image: url("");
     background-size: cover;
     background-position: center;
     padding: 4rem 0;
@@ -667,7 +667,7 @@ button:hover ~ .custom-cursor,
     width: 100%;
     height: 100%;
     z-index: 9998;
-    background-image: url("https://i.imgur.com/OO7pM8x.png"); /* grain más fuerte */
+    background-image: url(""); /* grain más fuerte */
     opacity: 0.16; /* WAS 0.09 */
     animation: grainAnimate 1.2s steps(6) infinite;
     mix-blend-mode: soft-light; /* funciona mejor en fondos oscuros */
