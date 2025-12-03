@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RewinD - Creative Design Studio</title>
+    <meta name="description" content="RewinD - Innovative branding and design solutions for tomorrow, today">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./img/favicon.png" type="image/x-icon">
+</head>
+<body>
+        <div class="video-modal" id="videoModal">
+            <span class="video-modal-close" id="closeVideoModal">✕</span>
+            <div id="videoModalContent"></div>
+        </div>
+
+
+
+
+
+        <div id="preloader">
+            <div class="loader-logo">
+                <img src="./logo.png" alt="Rewind Logo">
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+            <audio id="rewindSound" src="./rewind.mp3"></audio>
+        </div>
+
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo-wrapper">
+                    <div class="logo">
+                        <a href="index.html" class="nav-logo">
+                            <img src="./logo.png" alt="RewinD Logo" class="nav-logo">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="nav">
+                    <a href="./whowe/whowe.html" class="nav-btn nav-ghost" data-i18n="about">¿Quiénes somos?</a>
+
+                    <a href="./ForYesterday/foryesterday.html" class="nav-btn nav-ghost" data-i18n="yesterday">Para ayer</a>
+                    <a href="./Fortoday/fortoday.html" class="nav-btn nav-ghost" data-i18n="today">Para hoy</a>
+                    <a href="./contact/contact.html" class="nav-btn nav-outline" data-i18n="contact">Contacto</a>
+                </nav>
+
+                <!-- Date and Flags -->
+                <div class="header-right">
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="date-display">
+                        <span class="date-day">Lun</span>
+                        <span class="date-number">13</span>
+                        <span class="date-month">Oct</span>
+                    </div>
+                    <div class="flags">
+                        <div class="flag">
+                            <img src="https://flagcdn.com/co.svg" alt="Colombia">
+                        </div>
+                        <div class="flag">
+                            <img src="https://flagcdn.com/br.svg" alt="Brazil">
+                        </div>
+                        <div class="flag">
+                            <img src="https://flagcdn.com/us.svg" alt="USA">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+       <!-- Home Hero Section -->
+    <section class="home-hero" id="home">
+        <div class="hero-video">
+            <video autoplay muted loop playsinline preload="auto" id="heroVideo">
+                <source src="./Rewind_notifica.mp4" type="video/mp4">
+            </video>
+        </div>
+
+
+
+        <div class="container">
+            <div class="hero-content">
+
+                <div class="hero-badge" >
+                    <svg  style="z-index: 2;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="5 3 19 12 5 21 5 3"/>
+                    </svg>
+                    <span style="z-index: 2;" data-i18n="hero_title">EXPERIENCE THE NARRATIVE</span>
+                </div>
+
+                <!-- HERO LOGO ANIMADO -->
+                <div class="hero-title logo-hero">
+                    <img src="./logo.png" alt="Rewind Logo" class="hero-logo">
+                </div>
+
+                <p class="hero-subtitle" data-i18n="hero_subtitle">
+                    A multimedia journey through time, memory, and perception.<br>
+                    Explore stories told through video, sound, and visual art.
+                </p>
+
+                <div class="hero-actions">
+                    <button class="hero-btn hero-btn-primary" onclick="document.getElementById('moving-stories').scrollIntoView({behavior: 'smooth'})" data-i18n="Button1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="5 3 19 12 5 21 5 3"/>
+                        </svg>
+                        Start the Journey
+                    </button>
+                    <button class="hero-btn hero-btn-outline" onclick="document.getElementById('visual-poetry').scrollIntoView({behavior: 'smooth'})" data-i18n="Button2">View Gallery</button>
+                </div>
+
+                <div class="hero-scroll">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"/>
+                    </svg>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Moving Stories Section -->
+    <section class="moving-stories" id="moving-stories">
+        <div class="container">
+            <div class="section-header-center">
+                <h2 class="section-title-center" data-i18n="moving_stories_title">Moving Stories</h2>
+                <p class="section-description-center"><span data-i18n="moving_stories_desc">Experience narratives that unfold through motion and time</span></p>
+            </div>
+            <div class="stories-grid">
+
+                <!-- ANIMATED LEGENDS -->
+                <div class="story-card story-card-image" data-video="./Rewind_notifica.mp4">
+                    <img style="z-index: 0; opacity: 0.5;" src="./legends-thumb.jpg" class="story-thumb" alt="">
+                    
+                    <video class="story-video" muted preload="auto" loop playsinline>
+                        <source src="./Rewind_notifica.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="story-overlay">
+                        <span class="story-category" data-i18n="animated_legends">← ANIMATED LEGENDS</span>
+                        <h3 class="story-title" data-i18n="animated_legends_title">The Animated Chronicle</h3>
+                        <p class="story-description" data-i18n="animated_legends_desc">A visual journey through animated memories</p>
+                    </div>
+                </div>
+
+
+                <!-- NARRATIVE SERIES (vertical video) -->
+                <div class="story-card story-card-image" data-video="./Rewind.mp4">
+
+                    <img style="z-index: 0; opacity: 0.5;" src="./vertical-thumb.jpg" class="story-thumb" alt="Vertical Story Thumbnail">
+                    <video class="story-bg" muted preload="auto" loop playsinline>
+                        <source src="./Rewind.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="story-overlay">
+                        <span class="story-category" data-i18n="narrative_series">← NARRATIVE SERIES</span>
+                        <h3 class="story-title" data-i18n="vertical_story_title">Vertical Story</h3>
+                        <p class="story-description" data-i18n="vertical_story_desc">An intimate narrative experience</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Poetry Section -->
+    <!-- Visual Poetry Section -->
+    <section class="visual-poetry" id="visual-poetry">
+        <div class="container">
+            <div class="section-header-center">
+                <h2 class="section-title-center" data-i18n="visual_poetry_title">Visual Poetry</h2>
+                <p class="section-description-center"> <span data-i18n="visual_poetry_desc">Stories expressed through stillness</span></p>
+            </div>
+
+            <div class="poetry-grid">
+
+                <!-- CARD 1 -->
+                <div class="poetry-card" data-index="0">
+                    <img src="./pieces (1).jpg" alt="Visual Poetry 1">
+                    <div class="poetry-overlay">
+
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="poetry-card" data-index="1">
+                    <img src="./pieces (2).jpg" alt="Visual Poetry 2">
+                    <div class="poetry-overlay">
+
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="poetry-card" data-index="2">
+                    <img src="./pieces (3).jpg" alt="Visual Poetry 3">
+                    <div class="poetry-overlay">
+
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="poetry-card" data-index="3">
+                    <img src="./pieces (1).png" alt="Visual Poetry 4">
+                    <div class="poetry-overlay">
+
+                    </div>
+                </div>
+
+                <!-- CARD 5 -->
+                <div class="poetry-card" data-index="4">
+                    <img src="./pieces (2).png" alt="Visual Poetry 5">
+                    <div class="poetry-overlay">
+
+                    </div>
+                </div>
+
+                <!-- CARD 6 -->
+                <div class="poetry-card" data-index="5">
+                    <img src="./pieces (3).png" alt="Visual Poetry 6">
+                    <div class="poetry-overlay">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+        <!-- MODAL VISUAL POETRY -->
+    <div class="image-modal" id="imageModal">
+        <span class="image-modal-close" id="closeImageModal">✕</span>
+
+        <img id="imageModalMain" src="" alt="Fullscreen Image">
+
+        <div class="image-modal-nav image-prev" id="imagePrev">←</div>
+        <div class="image-modal-nav image-next" id="imageNext">→</div>
+    </div>
+
+
+    <!-- Audio Narrative Section -->
+<!-- Audio Narrative Section -->
+<section class="audio-narrative" id="audio-narrative">
+    <div class="container">
+        <div class="section-header-center parallax-text">
+            <h2 class="section-title-center" data-i18n="audio_narrative_title">Audio Narrative</h2>
+            <p class="section-description-center"> <span data-i18n="audio_narrative_desc">Listen to the stories behind the silence</span></p>
+        </div>
+
+        <div class="audio-player">
+            <div class="audio-cover">
+                <img src="./Podcast_cover.png" alt="Podcast Cover" id="podcastCover">
+            </div>
+
+            <div class="audio-controls">
+                <h3 class="audio-title parallax-text" data-i18n="audio_narrative_journal_title">Rewind: The Soundscape Journal</h3>
+                <p class="audio-description parallax-text" >
+                    <span data-i18n="audio_narrative_journal_desc">An immersive journey through sound, memory, and narrative fragments.</span>
+                </p>
+
+                <audio id="podcastAudio">
+                    <source src="./podcast.mp3" type="audio/mpeg">
+                </audio>
+
+                <div class="audio-progress-container" id="progressContainer">
+                    <div class="audio-progress" id="audioProgress"></div>
+                </div>
+
+                <div class="audio-buttons">
+                    <button id="rewindBtn" class="audio-btn">⟲ 10s</button>
+                    <button id="playBtn" class="audio-btn">▶</button>
+                    <button id="forwardBtn" class="audio-btn">10s ⟳</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+
+            <!-- LEFT -->
+            <div class="footer-left">
+                <h2 class="footer-title" data-i18n="footer_title">Nosotros</h2>
+                <p class="footer-subtitle" data-i18n="footer_desc">
+                    En Rewind Studio diseñamos experiencias visuales, narrativas y digitales con enfoque cinematográfico.
+                </p>
+
+                <div class="footer-cta">
+                    <h3 class="cta-title" data-i18n="footer_cta_title">¿Listo para crear algo inolvidable?</h3>
+                    <button class="cta-button" data-i18n="footer_cta_btn">Contáctanos</button>
+                </div>
+            </div>
+
+            <!-- CENTER -->
+            <div class="footer-center">
+                <h3 class="footer-section-title" data-i18n="footer_contact_title">Contacto</h3>
+                <p class="footer-text" data-i18n="footer_location">📍 Cali, Colombia</p>
+                <p class="footer-text" data-i18n="footer_email">✉ contacto@rewindstudio.com</p>
+                <p class="footer-text" data-i18n="footer_phone">📞 +57 311 3365426</p>
+
+                <!-- SOCIAL MEDIA INTEGRADO -->
+                <div class="contact-social">
+                    <h4 class="contact-social-title" data-i18n="footer_follow_us">Síguenos</h4>
+                    <div class="contact-social-links">
+                        <a href="https://www.instagram.com/rewind.visuals?igsh=MW84aHZ3NzNtM3JhNg==" target="_blank" class="contact-social-link" aria-label="Instagram">
+                            <!-- IG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" 
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                            </svg>
+                        </a>
+
+                        <a href="https://linkedin.com" target="_blank" class="contact-social-link" aria-label="LinkedIn">
+                            <!-- LinkedIn -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect width="4" height="12" x="2" y="9"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+
+                        <a href="https://twitter.com" target="_blank" class="contact-social-link" aria-label="Twitter">
+                            <!-- Twitter/X -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" 
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+                                </svg>
+                        </a>
+
+                        <a href="https://www.tiktok.com/@rewind389?is_from_webapp=1&sender_device=pc" target="_blank" class="contact-social-link" aria-label="TikTok">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" 
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2c1 4 3 6 6 6v3c-2 0-4-1-5-2v7a5 5 0 1 1-5-5h1"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="footer-right">
+                <h3 class="footer-section-title" data-i18n="footer_partners">Partners:</h3>
+                <p class="footer-text" data-i18n="footer_socials">Rebobinar para entender</p>
+
+                <div class="partner-logos">
+                    <img src="./img/RewindGroup.png" alt="Partner logo" class="partner-logo">
+                    <img src="./img/Vertigo.png" alt="Partner logo" class="partner-logo">
+                    <img src="./img/AnnaOC.png" alt="Partner logo" class="partner-logo">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+
+    <script src="script.js"></script>
+    <div class="custom-cursor"></div>
+    <div class="film-grain"></div>
+
+
+</body>
+</html>
+
